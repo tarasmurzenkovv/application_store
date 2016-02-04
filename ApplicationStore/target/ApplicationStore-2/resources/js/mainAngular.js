@@ -1,1 +1,0 @@
-var appStore = angular.module('appStore', ['ngRoute','ngCookies']);
