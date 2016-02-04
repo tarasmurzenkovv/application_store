@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Application Store
+Implementation-Version: 2
+Built-By: tmurzenkov
+Implementation-Vendor-Id: ua.dataart
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_51
+Main-Class: ${start-class}
+

@@ -1,0 +1,97 @@
+<div id="menu">
+    <div class="pure-menu menu-width-restricted">
+        <ul class="pure-menu-list">
+
+            <li class="fixed-height">
+                <br/>
+
+                <div class="pure-menu-link">
+                    Hello, {{customerLogin}}
+                </div>
+            </li>
+
+            <li class="fixed-height">
+                <a href="#/view_applications" class="pure-menu-link">Your apps</a>
+            </li>
+
+            <li class="fixed-height">
+                <a href="#/upload_application" class="pure-menu-link">Add an app</a>
+            </li>
+
+            <br/>
+
+            <li class="fixed-height">
+                <hr/>
+            </li>
+
+            <br/>
+
+            <li class="fixed-height">
+                <a href="/logout" class="pure-menu-link">Log Out</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="site-content">
+    <h1 class="application-header">Submit application</h1>
+
+    <form class="pure-form pure-form-aligned">
+
+        <fieldset>
+            <!-- Global server error-->
+            <div class="pure-control-group">
+                <label id="globalServerError" class="error"/>
+            </div>
+
+            <!--Enter application name-->
+            <div class="pure-control-group">
+                <label for="application_name">Application name</label>
+                <input id="application_name" type="text" placeholder="Application name"
+                       ng-model="applicationDescription.applicationName"/>
+                <label id="applicationNameError" class="error"/>
+            </div>
+
+            <!--Enter application description-->
+            <div class="pure-control-group">
+                <label for="application_description">Description</label>
+                <input id="application_description" type="text" placeholder="Description"
+                       ng-model="applicationDescription.applicationDescription">
+                <label id="applicationDescriptionError" class="error"/>
+            </div>
+
+            <!--Enter application description-->
+            <div class="pure-control-group">
+                <label for="category">App category</label>
+                <select id="category"
+                        ng-model="applicationDescription.categoryName"
+                        ng-options="category.categoryName for category in applicationCategories">
+                    <option value="">Select category</option>
+                </select>
+            </div>
+
+
+            <!--Upload application archive-->
+            <div class="pure-control-group">
+                <label for="choose_file">Choose file</label>
+                <input id="choose_file" type="file" file-model="myFile">
+            </div>
+
+
+            <!--Button-->
+            <div class="centeredInDiv">
+                <div class="pure-controls">
+                    <button type="submit"
+                            class="pure-button pure-button-primary"
+                            ng-click="UploadFile()">Add application
+                    </button>
+                </div>
+            </div>
+            <div class="pure-controls">
+                <a href="#/view_applications">View your applications</a>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+<!--END: add vehicle-->

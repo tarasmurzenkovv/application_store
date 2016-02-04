@@ -1,0 +1,63 @@
+<div id="menu">
+    <div class="pure-menu menu-width-restricted">
+        <ul class="pure-menu-list">
+
+            <li class="fixed-height">
+                <br/>
+
+                <div class="pure-menu-link">
+                    Hello, {{customerLogin}}
+                </div>
+
+            <li class="fixed-height">
+                <a href="#/view_applications" class="pure-menu-link">Your apps</a>
+            </li>
+
+            <li class="fixed-height">
+                <a href="#/upload_application" class="pure-menu-link">Add an app</a>
+            </li>
+
+            <br/>
+
+            <li class="fixed-height">
+                <hr/>
+            </li>
+
+            <br/>
+
+            <li class="fixed-height">
+                <a href="/logout" class="pure-menu-link">Log Out</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="site-content">
+    <h1 class="application-header">Your applications</h1>
+
+    <div class="pure-control-group">
+
+        <label id="globalServerError" class="error"/>
+
+        <table class="pure-table pure-table-horizontal">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Desc</th>
+                <th>Download</th>
+                <th># Downloads</th>
+                <th>Image</th>
+            </tr>
+            <tr ng-repeat="application in customerApplications">
+                <td>{{application.applicationName}}</td>
+                <td>{{application.applicationDescription}}</td>
+                <td><a href="" ng-click="downLoadApp(application.applicationName)" style="color: black">Get app. </a>
+                </td>
+                <td>{{application.applicationDownloads}}</td>
+                <td><img ng-src="/images/small/{{application.applicationName}}"/></td>
+            </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
