@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-war" name="ApplicationSotre">
-    <output-path>$PROJECT_DIR$/out/artifacts/ApplicationSotre</output-path>
-    <root id="root" />
-  </artifact>
-</component>
